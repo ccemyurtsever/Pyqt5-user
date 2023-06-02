@@ -16,6 +16,7 @@ class mainForm(QMainWindow):
         self.gui()
 
     def gui(self):
+        
         self.lbl1 = QtWidgets.QLabel(self)
         guiName = "HERE" # Type the program name
         self.lbl1.setText(guiName)

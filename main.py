@@ -16,12 +16,26 @@ class mainForm(QMainWindow):
         self.gui()
 
     def gui(self):
-        
+
         self.lbl1 = QtWidgets.QLabel(self)
         guiName = "HERE" # Type the program name
         self.lbl1.setText(guiName)
         self.lbl1.move(200,10)
         self.lbl1.setStyleSheet("background-color: #4180b3")
+
+        self.lbl2 = QtWidgets.QLabel(self)
+        self.lbl2.setText("Username :")
+        self.lbl2.move(25,160)
+
+        self.lbl3 = QtWidgets.QLabel(self)
+        self.lbl3.setText("Password :")
+        self.lbl3.move(25,200)
+
+        self.entry1 = QtWidgets.QLineEdit(self)
+        self.entry1.move(85,160)
+
+        self.entry2 = QtWidgets.QLineEdit(self)
+        self.entry2.move(85,200)
 
 def window():
     app = QApplication(sys.argv)

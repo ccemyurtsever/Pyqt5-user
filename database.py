@@ -19,5 +19,11 @@ def create():
         username text NOT NULL,
         password text NOT NULL
     )""")
-    connect.commit()
-    connect.close()
+    dbOut()
+
+def instert(name,lastname,username,password):
+    dbConnect()
+    add_command = """INSERT INTO USERS(name,lastname,username,password) VALUES {} """
+    add = (name,lastname,username,password)
+    cursor.execute(add_command.format(add))
+    dbOut()

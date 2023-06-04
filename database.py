@@ -27,3 +27,9 @@ def instert(name,lastname,username,password):
     add = (name,lastname,username,password)
     cursor.execute(add_command.format(add))
     dbOut()
+
+def update_password(username,newPassword):
+    dbConnect()
+    upd_command = """UPDATE USERS SET password = '{}' WHERE username = '{}'"""
+    cursor.execute(upd_command.format(username,newPassword))
+    dbOut()

@@ -12,13 +12,13 @@ class mainForm(QMainWindow):
         self.setWindowIcon(QIcon("icon.png"))
         self.setWindowTitle("CCY - UserApp")
         self.setGeometry(200, 200, 500, 500)
-        self.setWindowOpacity(0.9)
+        self.setWindowOpacity(0.9) # Transparency setting max:1 min:0
         self.gui()
 
     def gui(self):
 
         self.lbl1 = QtWidgets.QLabel(self)
-        guiName = "HERE" # Type the program name
+        guiName = "" # Type the program name
         self.lbl1.setText(guiName)
         self.lbl1.move(200,10)
         self.lbl1.setStyleSheet("background-color: #4180b3")
@@ -36,6 +36,11 @@ class mainForm(QMainWindow):
 
         self.entry2 = QtWidgets.QLineEdit(self)
         self.entry2.move(85,200)
+
+        self.btn1 = QtWidgets.QPushButton(self)
+        self.btn1.setText("LOGIN")
+        self.btn1.move(85,250)
+
 
 def window():
     app = QApplication(sys.argv)

@@ -9,7 +9,7 @@ from database import *
 class mainForm(QMainWindow):
     def __init__(self):
         super(mainForm, self).__init__()
-        self.setWindowIcon(QIcon("icon.png"))
+        self.setWindowIcon(QIcon("image/icon.png"))
         self.setWindowTitle("CCY - UserApp")
         self.setGeometry(200, 200, 500, 500)
         self.setWindowOpacity(0.9) # Transparency setting max:1 min:0

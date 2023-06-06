@@ -25,21 +25,21 @@ class mainForm(QMainWindow):
 
         self.lbl2 = QtWidgets.QLabel(self)
         self.lbl2.setText("Username :")
-        self.lbl2.move(25,160)
+        self.lbl2.move(25,110)
 
         self.lbl3 = QtWidgets.QLabel(self)
         self.lbl3.setText("Password :")
-        self.lbl3.move(25,200)
+        self.lbl3.move(25,150)
 
         self.entry1 = QtWidgets.QLineEdit(self)
-        self.entry1.move(85,160)
+        self.entry1.move(85,110)
 
         self.entry2 = QtWidgets.QLineEdit(self)
-        self.entry2.move(85,200)
+        self.entry2.move(85,150)
 
         self.btn1 = QtWidgets.QPushButton(self)
         self.btn1.setText("LOGIN")
-        self.btn1.move(85,250)
+        self.btn1.move(85,200)
 
 
 def window():

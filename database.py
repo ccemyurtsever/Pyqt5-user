@@ -53,6 +53,7 @@ def urgently_drop():
     os.remove(database_file)
     dbConnect()
     dbOut()
+    time.sleep(4)
 
 
 urgently_drop()

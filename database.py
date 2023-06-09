@@ -33,3 +33,9 @@ def update_password(username,newPassword):
     upd_command = """UPDATE USERS SET password = '{}' WHERE username = '{}'"""
     cursor.execute(upd_command.format(username,newPassword))
     dbOut()
+
+def delete_account(username):
+    dbConnect()
+    dlt_command = """DELETE FROM USERS WHERE username = '{}' """
+    cursor.execute(dlt_command.format(username))
+    dbOut()

@@ -11,7 +11,7 @@ class mainForm(QMainWindow):
         super(mainForm, self).__init__()
         self.setWindowIcon(QIcon("image/icon.png"))
         self.setWindowTitle("CCY - UserApp")
-        self.setGeometry(200, 200, 500, 500)
+        self.setGeometry(200, 200, 460, 480)
         self.setWindowOpacity(0.9) # Transparency setting max:1 min:0
         self.gui()
 
@@ -22,6 +22,11 @@ class mainForm(QMainWindow):
         self.lbl1.setText(guiName)
         self.lbl1.move(200,10)
         self.lbl1.setStyleSheet("background-color: #4180b3")
+
+        self.info = QtWidgets.QPushButton(self)
+        self.info.setText("?")
+        self.info.setGeometry(400,10,57,30)
+        self.info.setStyleSheet("background-color: #3498DB")
 
         self.lbl2 = QtWidgets.QLabel(self)
         self.lbl2.setText("Username :")
@@ -41,6 +46,39 @@ class mainForm(QMainWindow):
         self.btn1.setText("LOGIN")
         self.btn1.move(85,200)
 
+        self.lbl2 = QtWidgets.QLabel(self)
+        self.lbl2.setText("Name*        :")
+        self.lbl2.move(250,110)
+
+        self.entry3 = QtWidgets.QLineEdit(self)
+        self.entry3.move(320,110)
+        
+        self.lbl2 = QtWidgets.QLabel(self)
+        self.lbl2.setText("Lastname* :")
+        self.lbl2.move(250,150)
+
+        self.entry3 = QtWidgets.QLineEdit(self)
+        self.entry3.move(320,150)
+
+        self.lbl2 = QtWidgets.QLabel(self)
+        self.lbl2.setText("Username* :")
+        self.lbl2.move(250,190)
+
+        self.entry3 = QtWidgets.QLineEdit(self)
+        self.entry3.move(320,190)
+
+        self.lbl2 = QtWidgets.QLabel(self)
+        self.lbl2.setText("Password* :")
+        self.lbl2.move(250,230)
+
+        self.entry3 = QtWidgets.QLineEdit(self)
+        self.entry3.move(320,230)
+
+        self.btn2 = QtWidgets.QPushButton(self)
+        self.btn2.setText("REGISTER")
+        self.btn2.move(320,280)
+
+
 
 def window():
     app = QApplication(sys.argv)
@@ -48,5 +86,4 @@ def window():
     window.show()
     sys.exit(app.exec_())
 
-    
 window()

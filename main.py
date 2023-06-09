@@ -3,6 +3,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon
 
+import time
+
 from database import *
 
 
@@ -15,7 +17,9 @@ class mainForm(QMainWindow):
         self.setWindowOpacity(0.9) # Transparency setting max:1 min:0
         self.gui()
 
+
     def gui(self):
+        
 
         self.lbl1 = QtWidgets.QLabel(self)
         guiName = "" # Type the program name
@@ -25,8 +29,10 @@ class mainForm(QMainWindow):
 
         self.info = QtWidgets.QPushButton(self)
         self.info.setText("?")
-        self.info.setGeometry(400,10,57,30)
+        self.info.setGeometry(400,10,57,25)
         self.info.setStyleSheet("background-color: #3498DB")
+
+        QMessageBox.about(self, "CCY - İnfo", "For communication: https://ccemyurtsever.com/")
 
         self.lbl2 = QtWidgets.QLabel(self)
         self.lbl2.setText("Username :")
@@ -85,5 +91,5 @@ def window():
     window = mainForm()
     window.show()
     sys.exit(app.exec_())
-
+    
 window()

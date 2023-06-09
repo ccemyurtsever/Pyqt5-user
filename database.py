@@ -1,4 +1,6 @@
 import sqlite3 as sql
+import time
+import os
 
 def dbConnect():
     global connect
@@ -20,22 +22,37 @@ def create():
         password text NOT NULL
     )""")
     dbOut()
+    time.sleep(1)
 
-def instert(name,lastname,username,password):
+
+def insert(name,lastname,username,password):
     dbConnect()
     add_command = """INSERT INTO USERS(name,lastname,username,password) VALUES {} """
     add = (name,lastname,username,password)
     cursor.execute(add_command.format(add))
     dbOut()
+    time.sleep(1)
 
 def update_password(username,newPassword):
     dbConnect()
     upd_command = """UPDATE USERS SET password = '{}' WHERE username = '{}'"""
     cursor.execute(upd_command.format(username,newPassword))
     dbOut()
+    time.sleep(1)
 
 def delete_account(username):
     dbConnect()
     dlt_command = """DELETE FROM USERS WHERE username = '{}' """
     cursor.execute(dlt_command.format(username))
     dbOut()
+    time.sleep(1)
+
+def urgently_drop():
+    database_file = "database.db"
+    os.path.exists(database_file)
+    os.remove(database_file)
+    dbConnect()
+    dbOut()
+
+
+urgently_drop()

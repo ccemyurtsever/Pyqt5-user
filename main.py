@@ -31,8 +31,7 @@ class mainForm(QMainWindow):
         self.info.setText("?")
         self.info.setGeometry(400,10,57,25)
         self.info.setStyleSheet("background-color: #3498DB")
-
-        QMessageBox.about(self, "CCY - İnfo", "For communication: https://ccemyurtsever.com/")
+        self.info.clicked.connect(self.process)
 
         self.lbl2 = QtWidgets.QLabel(self)
         self.lbl2.setText("Username :")
@@ -83,6 +82,14 @@ class mainForm(QMainWindow):
         self.btn2 = QtWidgets.QPushButton(self)
         self.btn2.setText("REGISTER")
         self.btn2.move(320,280)
+
+
+    def process(self):
+        sender = self.sender().text()
+        result = 0
+        if sender == "?":
+            QMessageBox.about(self, "CCY - İnfo", "For communication: https://ccemyurtsever.com/")
+
 
 
 

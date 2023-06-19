@@ -55,5 +55,3 @@ def urgently_drop():
     dbOut()
     time.sleep(4)
 
-
-urgently_drop()

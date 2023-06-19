@@ -40,6 +40,13 @@ def update_password(username,newPassword):
     dbOut()
     time.sleep(1)
 
+def search_username(username):
+    dbConnect()
+    add_search = """SELECT * FROM USERS WHERE username = '{}' """
+    add = username
+    cursor.execute(add_search.format(add))
+    dbOut()
+
 def delete_account(username):
     dbConnect()
     dlt_command = """DELETE FROM USERS WHERE username = '{}' """

@@ -50,6 +50,7 @@ class mainForm(QMainWindow):
         self.btn1 = QtWidgets.QPushButton(self)
         self.btn1.setText("LOGIN")
         self.btn1.move(85,200)
+        self.btn1.clicked.connect(self.process)
 
         self.lbl2 = QtWidgets.QLabel(self)
         self.lbl2.setText("Name*        :")
@@ -82,6 +83,7 @@ class mainForm(QMainWindow):
         self.btn2 = QtWidgets.QPushButton(self)
         self.btn2.setText("REGISTER")
         self.btn2.move(320,280)
+        self.btn2.clicked.connect(self.process)
 
 
     def process(self):
@@ -89,6 +91,12 @@ class mainForm(QMainWindow):
         result = 0
         if sender == "?":
             QMessageBox.about(self, "CCY - İnfo", "For communication: https://ccemyurtsever.com/")
+        elif sender == "REGISTER":
+            # Daha sonra kayıt olunma durumuna göre koşullanacak.
+            QMessageBox.about(self, "CCY - İnfo", "YOUR REGISTRATION PROCESS IS SUCCESSFULLY COMPLETED.\n\nKAYIT İŞLEMİNİZ BAŞARI İLE TAMAMLANMIŞTIR.")
+        elif sender == "LOGIN":
+            pass
+
 
 
 

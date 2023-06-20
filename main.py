@@ -63,22 +63,22 @@ class mainForm(QMainWindow):
         self.lbl2.setText("Lastname* :")
         self.lbl2.move(250,150)
 
-        self.entry3 = QtWidgets.QLineEdit(self)
-        self.entry3.move(320,150)
+        self.entry4 = QtWidgets.QLineEdit(self)
+        self.entry4.move(320,150)
 
         self.lbl2 = QtWidgets.QLabel(self)
         self.lbl2.setText("Username* :")
         self.lbl2.move(250,190)
 
-        self.entry3 = QtWidgets.QLineEdit(self)
-        self.entry3.move(320,190)
+        self.entry5 = QtWidgets.QLineEdit(self)
+        self.entry5.move(320,190)
 
         self.lbl2 = QtWidgets.QLabel(self)
         self.lbl2.setText("Password* :")
         self.lbl2.move(250,230)
 
-        self.entry3 = QtWidgets.QLineEdit(self)
-        self.entry3.move(320,230)
+        self.entry6 = QtWidgets.QLineEdit(self)
+        self.entry6.move(320,230)
 
         self.btn2 = QtWidgets.QPushButton(self)
         self.btn2.setText("REGISTER")
@@ -92,8 +92,15 @@ class mainForm(QMainWindow):
         if sender == "?":
             QMessageBox.about(self, "CCY - İnfo", "For communication: https://ccemyurtsever.com/")
         elif sender == "REGISTER":
-            # Daha sonra kayıt olunma durumuna göre koşullanacak.
+            name = self.entry3.text()
+            lastname = self.entry4.text()
+            username = self.entry5.text()
+            password = self.entry6.text()
+            insert(name,lastname,username,password)
+            # Boş bırakma durumunda yinede kayıt yapılıyor.
+
             QMessageBox.about(self, "CCY - İnfo", "YOUR REGISTRATION PROCESS IS SUCCESSFULLY COMPLETED.\n\nKAYIT İŞLEMİNİZ BAŞARI İLE TAMAMLANMIŞTIR.")
+            
         elif sender == "LOGIN":
             pass
 

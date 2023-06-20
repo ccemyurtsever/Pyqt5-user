@@ -24,6 +24,7 @@ def create():
     dbOut()
     time.sleep(1)
 
+create()
 
 def insert(name,lastname,username,password):
     dbConnect()

@@ -90,7 +90,7 @@ class mainForm(QMainWindow):
         sender = self.sender().text()
         result = 0
         if sender == "?":
-            QMessageBox.about(self, "CCY - İnfo", "For communication: https://ccemyurtsever.com/")
+            QMessageBox.about(self, "CCY - İnfo", "For communication: https://cemyurtsever.dev/")
         elif sender == "REGISTER":
             name = self.entry3.text()
             lastname = self.entry4.text()

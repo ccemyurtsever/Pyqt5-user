@@ -12,7 +12,7 @@ class mainForm(QMainWindow):
     def __init__(self):
         super(mainForm, self).__init__()
         self.setWindowIcon(QIcon("image/icon.png"))
-        self.setWindowTitle("CCY - UserApp")
+        self.setWindowTitle("CY - UserApp")
         self.setGeometry(200, 200, 460, 480)
         self.setWindowOpacity(0.9) # Transparency setting max:1 min:0
         self.gui()
@@ -90,16 +90,17 @@ class mainForm(QMainWindow):
         sender = self.sender().text()
         result = 0
         if sender == "?":
-            QMessageBox.about(self, "CCY - İnfo", "For communication: https://cemyurtsever.dev/")
+            QMessageBox.about(self, "CY - İnfo", "For communication: https://cemyurtsever.dev/")
         elif sender == "REGISTER":
             name = self.entry3.text()
             lastname = self.entry4.text()
             username = self.entry5.text()
             password = self.entry6.text()
             insert(name,lastname,username,password)
+            time.sleep(.5)
             # Boş bırakma durumunda yinede kayıt yapılıyor.
 
-            QMessageBox.about(self, "CCY - İnfo", "YOUR REGISTRATION PROCESS IS SUCCESSFULLY COMPLETED.\n\nKAYIT İŞLEMİNİZ BAŞARI İLE TAMAMLANMIŞTIR.")
+            QMessageBox.about(self, "CY - İnfo", "YOUR REGISTRATION PROCESS IS SUCCESSFULLY COMPLETED.\n\nKAYIT İŞLEMİNİZ BAŞARI İLE TAMAMLANMIŞTIR.")
             
         elif sender == "LOGIN":
             pass

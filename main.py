@@ -6,7 +6,7 @@ from PyQt5.QtGui import QIcon
 import time
 
 from database import *
-
+ 
 
 class mainForm(QMainWindow):
     def __init__(self):

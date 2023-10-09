@@ -20,7 +20,6 @@ class mainForm(QMainWindow):
 
     def gui(self):
         
-
         self.lbl1 = QtWidgets.QLabel(self)
         guiName = "" # Type the program name
         self.lbl1.setText(guiName)
